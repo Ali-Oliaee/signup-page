@@ -1,7 +1,9 @@
+import SignupPage from "./pages/signup/sign-up";
+
 const App = () => {
   return (
-    <div className="App">     
-    cdscsd
+    <div className="App">    
+      <SignupPage/> 
     </div>
   );
 }
