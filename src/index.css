@@ -1,5 +1,14 @@
+@font-face {
+  font-family: "poppins";
+  src: "./assets/fonts/poppins.ttf";
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
 }

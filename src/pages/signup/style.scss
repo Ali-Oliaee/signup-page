@@ -1,7 +1,7 @@
 @import "../../utils/utils";
 
 .signup-page {
-  background: $red url("../../assets/desktop-background.png");
+  background: $red url("../../assets/images/desktop-background.png");
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -54,7 +54,7 @@
       p {
         color: $grayish-blue;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 11px;
         text-align: center;
         a {
           text-decoration: none;
