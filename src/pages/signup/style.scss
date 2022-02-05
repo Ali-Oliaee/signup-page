@@ -1,6 +1,67 @@
+@import "../../utils/utils";
+
 .signup-page {
-  background: url("../../assets/desktop-background.png");
+  background: $red url("../../assets/desktop-background.png");
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
+
+  .form-container {
+    width: 450px;
+    .premium-box {
+      background-color: $blue;
+      padding: 15px 60px;
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0 7px 0 0 rgba(104, 102, 102, 0.5);
+      margin: 20px 0;
+    }
+    .form {
+      padding: 25px 30px;
+      background-color: #fff;
+      box-shadow: 0 7px 0 0 rgba(104, 102, 102, 0.5);
+      border-radius: 10px;
+      form {
+        @include flex-box(center, center, column);
+
+        input {
+          margin: 10px 0;
+          padding: 15px 10px;
+          width: 100%;
+          border-radius: 5px;
+          outline: 0;
+          border: 1px solid #ddd;
+
+          &:focus {
+            border: 1px solid $dark-blue;
+          }
+          &::placeholder {
+            font-weight: bold;
+          }
+        }
+        button {
+          width: 100%;
+          background-color: $green;
+          border: 0;
+          border-radius: 5px;
+          padding: 15px 0;
+          color: #fff;
+          font-weight: bold;
+          box-shadow: 0 5px 0 0 rgba(2, 109, 2, 0.5);
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        color: $grayish-blue;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: $red;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
