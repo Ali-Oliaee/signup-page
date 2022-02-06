@@ -1,4 +1,5 @@
 import { Button, Form, Input } from 'antd'
+import { ReactComponent as ErrorIcon } from '../../assets/images/icon-error.svg'
 import './style.scss'
 
 const SignupPage = ()  => {
@@ -23,17 +24,41 @@ const SignupPage = ()  => {
           </div>
         <div className="form">
           <Form action="#" onFinish={validation}>
-            <Form.Item name='FirstName'>
+            <Form.Item name='FirstName' rules={[
+              {
+                required: true,
+                message: 'First Name cannot be empty'
+              }
+            ]}>
               <Input type="text" placeholder='First Name'/>
             </Form.Item>
-            <Form.Item name='LastName'>
-              <Input type="text" placeholder='Last Name'/>
+            <Form.Item name='LastName' rules={[
+              {
+                required: true,
+                message: 'Last Name cannot be empty'
+              }
+            ]}>
+              <Input type="text" placeholder='Last Name' />
             </Form.Item>
-            <Form.Item name='Email'>
+            <Form.Item name='Email' rules={[
+              {
+                required: true,
+                message: 'Email cannot be empty',
+              },
+              {
+                type:'email',
+                message: 'Looks like this not an email'
+              }
+            ]}>
               <Input type="email" placeholder='Email'/>
             </Form.Item>
-            <Form.Item name="password">
-              <Input.Password type='password' placeholder='Password' />
+            <Form.Item name="password" rules={[
+              {
+                required: true,
+                message: 'Password cannot be empty'
+              }
+            ]}>
+              <Input type='password' placeholder='Password' />
             </Form.Item>
             <Button htmlType='submit' className='submit-button'>
               CLAIM YOUR FREE TRIAL
