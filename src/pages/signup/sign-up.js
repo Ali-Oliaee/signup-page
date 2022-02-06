@@ -1,6 +1,10 @@
+import { Button, Form, Input } from 'antd'
 import './style.scss'
 
 const SignupPage = ()  => {
+  const validation = (values) => {
+    console.log('values', values);
+  }
   return (
     <div className='signup-page'>
       <div className="description-container">
@@ -18,32 +22,23 @@ const SignupPage = ()  => {
           </p>
           </div>
         <div className="form">
-          <form action="#" >
-            <input 
-              id="FirstName"
-              name='FirstName'
-              type="text" 
-              placeholder='First Name'
-            />
-            <input 
-              name='LastName'
-              type="text" 
-              placeholder='Last Name'
-            />
-            <input 
-              id="email"
-              name="email"
-              type="email"
-              placeholder='Email Address'
-            />
-            <input 
-              id='Password'
-              name='Password'
-              type="password" 
-              placeholder='Password'
-            />
-            <button type='submit'>CLAIM YOUR FREE TRIAL</button>
-          </form>
+          <Form action="#" onFinish={validation}>
+            <Form.Item name='FirstName'>
+              <Input type="text" placeholder='First Name'/>
+            </Form.Item>
+            <Form.Item name='LastName'>
+              <Input type="text" placeholder='Last Name'/>
+            </Form.Item>
+            <Form.Item name='Email'>
+              <Input type="email" placeholder='Email'/>
+            </Form.Item>
+            <Form.Item name="password">
+              <Input.Password type='password' placeholder='Password' />
+            </Form.Item>
+            <Button htmlType='submit' className='submit-button'>
+              CLAIM YOUR FREE TRIAL
+            </Button>
+          </Form>
           <p>
             By clicking the button you are going to our 
             <a href="/"> Terms and Services</a>
