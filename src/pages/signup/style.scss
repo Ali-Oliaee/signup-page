@@ -19,10 +19,10 @@
       font-weight: bolder;
       margin-bottom: 30px;
     }
-
     .description {
       font-size: 1em;
-      width: 100%;
+      text-align: left;
+      padding-inline-end: 10px;
     }
   }
 
@@ -105,8 +105,5 @@
         }
       }
     }
-  }
-  .validation {
-    color: $red;
   }
 }

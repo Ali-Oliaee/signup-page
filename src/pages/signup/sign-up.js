@@ -1,11 +1,7 @@
 import { Button, Form, Input } from 'antd'
-import { ReactComponent as ErrorIcon } from '../../assets/images/icon-error.svg'
 import './style.scss'
 
 const SignupPage = ()  => {
-  const validation = (values) => {
-    console.log('values', values);
-  }
   return (
     <div className='signup-page'>
       <div className="description-container">
@@ -23,16 +19,17 @@ const SignupPage = ()  => {
           </p>
           </div>
         <div className="form">
-          <Form action="#" onFinish={validation}>
-            <Form.Item name='FirstName' rules={[
+          <Form action="#">
+            <Form.Item name='name' rules={[
               {
                 required: true,
-                message: 'First Name cannot be empty'
+                message: 'First Name cannot be empty',
               }
-            ]}>
+            ]}
+            >
               <Input type="text" placeholder='First Name'/>
             </Form.Item>
-            <Form.Item name='LastName' rules={[
+            <Form.Item name='lastName' rules={[
               {
                 required: true,
                 message: 'Last Name cannot be empty'
@@ -40,7 +37,7 @@ const SignupPage = ()  => {
             ]}>
               <Input type="text" placeholder='Last Name' />
             </Form.Item>
-            <Form.Item name='Email' rules={[
+            <Form.Item name='email' rules={[
               {
                 required: true,
                 message: 'Email cannot be empty',
