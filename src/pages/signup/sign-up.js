@@ -5,10 +5,10 @@ const SignupPage = ()  => {
   return (
     <div className='signup-page'>
       <div className="description-container">
-        <h1 className='description-title'>Learn to code by watching others</h1>
+        <h1 className='description-title'>Learn to code by<br/> watching others</h1>
         <p className='description'>
           See how expeirenced developers solve problems in real-time.<br/>
-          Watching scripted tutorials is great, but understanding how developers think is invaluable.
+          Watching scripted tutorials is great, but understanding how developers<br/> think is invaluable.
         </p>
       </div>
       <div className="form-container">

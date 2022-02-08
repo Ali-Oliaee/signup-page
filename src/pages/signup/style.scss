@@ -5,14 +5,10 @@
   height: 100%;
   min-height: 100vh;
   overflow: hidden;
-  @include flex-box();
+  @include flex-box(center, center);
 
   .description-container {
-    margin-inline-start: 100px;
     color: #fff;
-    width: 500px;
-    @include flex-box(flex-start, center, column);
-
     .description-title {
       color: #fff;
       font-size: 3em;
@@ -21,14 +17,10 @@
     }
     .description {
       font-size: 1em;
-      text-align: left;
-      padding-inline-end: 10px;
     }
   }
 
   .form-container {
-    margin-inline-start: 100px;
-    width: 500px;
     .premium-box {
       background-color: $blue;
       padding: 20px 60px;
@@ -104,6 +96,32 @@
           font-weight: bold;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 1007px) {
+  .description-title {
+    text-align: center;
+  }
+  .description {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 375px) {
+  .signup-page {
+    padding: 5em 0;
+    background: $red url("../../assets/images/mobile-background.png");
+    .description-container {
+      .description-title {
+        font-size: 2em;
+      }
+      .description {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+    .form-container {
+      padding: 1em;
     }
   }
 }

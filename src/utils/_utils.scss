@@ -5,14 +5,14 @@ $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 
 @mixin flex-box(
-  $justify-items: center,
+  $justify-content: center,
   $align-items: center,
   $direction: row,
   $wrap: wrap
 ) {
   display: flex;
   align-items: $align-items;
-  justify-items: $justify-items;
+  justify-content: $justify-content;
   flex-direction: $direction;
   flex-wrap: $wrap;
 }
